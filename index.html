@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/jpeg" href="icon.jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. Lasaba Lakwashim</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if(!sessionStorage.getItem("verified")) {
+      window.location.href="verify.html";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur ma page web Lasaba-cyber</h1>
+    <h2>Cookies et technologies similaires</h2>
+    <p>
+      Nous utilisons des cookies pour améliorer l'expérience utilisateur et analyse le trafic sur notre site. ces cookies ne contiennent aucune information personnelle et peuvent etre désactivés via les parametre.  
+    </p>
+    <p style="text-align: center; font-size: 0.9em; color: #666;">Dernière mise à jour : 17 décembre 2024</p>
+    <p>Expert en Intelligence Artificielle et Sciences Informatiques</p>
+  </header>
+  <section id="profile">
+    <img src="Formation pratique Chiv.jpg" alt="Photo de profil de Mr. Lasaba" class="profile-pic">
+    <h2>À propos de Mr. Lasaba</h2>
+    <p>Étudiant à l'ISP Kikwit, passionné par l'informatique et l'intelligence artificielle.</p>
+  </section>
+  <section id="articles">
+    <h2>Articles et Publications</h2>
+    <p>Ici, vous trouverez les dernières vidéos, images et livres de Mr. Lasaba.</p>
+    <div id="publications">
+      <!-- Les publications apparaîtront ici -->
+    </div>
+  </section>
+  <section id="contact">
+    <h1>Contactez-nous</h1>
+    <form action="contact.php" method="POST">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+  
+      <label for="email">E-mail :</label>
+      <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" required>
+  
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" placeholder="Écrivez votre message ici" required></textarea>
+  
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+  <footer>
+    <p>
+      <img src="WhatsApp.logo"
+    class="WhatsApp-logo">
+    Contact WhatsApp : <a href="tel:+243836701190">+243 83 670 1190</a>
+    </p>
+    <p>Adresse : Aéroport Kikwit, RDC</p>
+    <label
+    for="language-select">Changer la langue :</label>
+    <select id="language-select" onchange="changeLanguage()">
+      <option
+    value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="sw">Swahili</option>
+    </select>
+    <marquee behavior="scroll"direction="left">
+        Bienvenue à tous sur le site de Mr. Lasaba. Merci pour votre visite et votre soutien !
+    </marquee>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Lien vers la page de confidentialité -->
+        <p><a href="confidentialité.html">Confidentialité</a></p>
+    
+        <!-- Option pour inviter d'autres personnes -->
+        <p>Invitez vos amis à découvrir cette page :</p>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=VotreURL" target="_blank">Partager sur Facebook</a>
+          <a href="https://twitter.com/intent/tweet?url=VotreURL" target="_blank">Partager sur Twitter</a>
+          <a href="https://wa.me/?text=Découvrez%20cette%20page%20:VotreURL" target="_blank">Partager sur WhatsApp</a>
+        </div>
+    
+        <!-- Bouton "J'aime" -->
+        <button id="like-button">👍 J'aime</button>
+  </footer>
+  </div>
+</body>
+</html>

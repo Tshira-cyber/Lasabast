@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérification Humaine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    .container h1 {
+      color: #333;
+    }
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .images img {
+      width: 100px;
+      height: 100px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: border-color 0.3s;
+    }
+    .images img:hover {
+      border-color: #007BFF;
+    }
+    .error {
+      color: red;
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Êtes-vous humain ?</h1>
+    <p>Veuillez cliquer sur l'image représentant un <strong>chat</strong> :</p>
+    <div class="images">
+      <img src="chien.jpg" alt="chien" data-answer="false">
+      <img src="chat.jpg" alt="chat" data-answer="true">
+      <img src="oiseau.jpg" alt="oiseau" data-answer="false">
+    </div>
+    <p class="error">Erreur : Vous n'êtes pas autorisé à accéder à la page. Essayez encore.</p>
+    <button id="retry" style="display:none;" onclick="retry()">Réessayer</button>
+  </div>
+
+  <script>
+    // Fonction pour vérifier la réponse
+    document.querySelectorAll('.images img').forEach(img => {
+      img.addEventListener('click', function () {
+        const isCorrect = this.getAttribute('data-answer') === 'true';
+        if (isCorrect) {
+          // Si la réponse est correcte, redirige vers la page d'accueil
+          alert("Vérification réussie ! Vous allez être redirigé.");
+          sessionStorage.setItem("verified", true);
+          window.location.href = "index.html";
+        } else {
+          // Si la réponse est incorrecte, affiche un message d'erreur
+          document.querySelector('.error').style.display = 'block';
+          document.getElementById('retry').style.display = 'inline-block';
+        }
+      });
+    });
+
+    // Fonction pour réessayer
+    function retry() {
+      document.querySelector('.error').style.display = 'none';
+      document.getElementById('retry').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 50%;
+}
+
+section {
+  padding: 2rem;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  margin: 0.5rem 0;
+}
+
+#contact input, #contact textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 0.7rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background: #D2691E;
+  color: white;
+  padding: 1rem 0;
+}
+scrolling-text {display: block;white-space: nowrap;overflow: hidden;box-sizing: border-box;width: 100;background-color: #333;color: white;padding: 10px;
+}
+scrolling-text::before{content: "";display: inline-block;padding-left: 100%;animation: scroll-text 15s linear infinite;
+}
+scrolling-text {animation: scroll-text 15s linear infinite;
+}
+@keyframes scroll-text {
+  0%{
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+whatsapp-logo{
+  width: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+} 
+/* Styles du pied de page */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+}
+.footer-container p {
+  margin: 10px 0;
+}
+.footer-container a {
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #007BFF;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.footer-container a:hover {
+  background-color: #0056b3;
+}
+#like-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#like-button:hover {
+  background-color: #218838;
+}
+/* Style général pour la page confidentialité */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+header h1 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #333;
+  margin-top: 20px;
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+a.btn-return {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+a.btn-return:hover {
+  background-color: #0056b3;
+}
